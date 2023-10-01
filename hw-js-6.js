@@ -1,14 +1,15 @@
-const users = {};
+let users = {};
 
 for (let i = 1; i <= 3; i++) {
-  let { name, age } = prompt("Enter the name and age of the user: " + i);
+  let name = prompt("Enter the username: " + i);
+  let age = prompt("Enter the userage " + i);
   users[i] = { name, age };
 }
 
-for (let id in users) {
-  console.log("User - " + id);
-  console.log("Username - " + users[id].name);
-  console.log("Userage - " + users[id].age);
+for (let key in users) {
+  console.log(`User - ${key}`);
+  console.log(`Username - ${users[key].name}`);
+  console.log(`Userage - ${users[key].age}`);
 }
 console.log(users);
 
